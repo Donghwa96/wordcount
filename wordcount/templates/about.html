@@ -1,5 +1,27 @@
-<h1>About</h1>
+{% extends 'base.html' %}
+{% load static %}
 
-<p>안녕하세요, 이곳은 글자를 세 주는 멋쟁이 사자철머의 워드카운트 웹페이지입니다. 여기에서 글자를 세세요.</p>
+{% block content %}
 
-<a href="{% url 'home' %}">Home으로 돌아가기</a>
+    <div class="row">
+        <ul class="about">
+            <li>About Service</li>
+            <p>저희 Are You Sure 서비스는 취준생이 자기소개서를 쓸 때 다시 한번 자신의 서류를 검토하는 서비스입니다.
+            예를 들어 자기소개서를 작성할때 기업에서 질문을 할 때 글자 수에 제한을 두는데 이 서비스를 사용하면 공백포함 글자 수, 공백제외 글자 수를 알 수 있습니다.
+            그리고 작성하다보면 하지만, 그런데, 그렇지만 등등의 접속 부사를 자기도 모르게 많이 사용하는 경우가 흔하게 생기는 것을 생각해 자기소개서의 텍스트를 보여준 후 자기소개서에서 어떤 단어를 주로 사용했는지 알 수 있습니다.
+            빈도 수가 높은 단어들을 바탕으로 자신의 자기소개서를 좀 더 간결하고 가독성있게 만들 수 있습니다!<br><br> 그러면 여기에 자기소개서를 작성해주세요!</p>
+        </ul>
+    </div>
+
+    <form action="{% url 'result' %}">
+        <textarea cols="100" rows="18" name="fulltext"></textarea>
+        <br>
+        <input type="submit" style="font-family: Raleway, cursive; font-weight: bold; border: 2px solid #807B79;  font-size: 25px; margin: 50px 0 50px 270px;" value="Count!">
+    </form>
+    <footer>
+        <div class="footer">
+            <p class="github">Github: https://github.com/Donghwa96/wordcount</p>
+        </div>
+    </footer>
+
+{% endblock %}

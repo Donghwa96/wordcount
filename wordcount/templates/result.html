@@ -1,15 +1,28 @@
-<h1>당신이 입력한 텍스트는 {{ total }} 개의 단어로 구성되어 있습니다. </h1>
+{% extends 'base.html' %}
+{% load static %}
 
-<a href="{% url 'home' %}"> 다시 하기 </a>
-<br>
-<h2> 입력한 테스트 : </h2>
-{{ full }}
-
-
-<h2> 단어 카운트 : </h2>
-<!-- '단어' - '단어가 나온 횟수' -->
-{% for word, howmany in dictionary %}
-
-{{ word }} : {{ howmany }}
-<br>
-{% endfor %}
+{% block content %}
+    <div class="container1">
+        <h1> 자소서 내용 : </h1>
+        {{ full }}
+    </div>
+    <div class="container1">
+        <h2>글자 수(공백 포함) : {{ total }}자 </h2>
+    </div>
+    <div class="container1">
+        <h2>글자 수(공백 제외) : {{ noblank }}자</h2>
+    </div>
+    <div class="container1">
+        <h2> 자소서에서 사용한 빈도순위 1~5위 단어</h2>
+    </div>
+    <div class="container1">
+        {% for key, howmany in dictionary %}
+            - {{ key }} : {{ howmany }}
+                <br>
+                <br>
+        {% endfor %}
+    </div>
+    <div class="container2">
+        <a href="{% url 'about' %}" class="btn btn-outline-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">다시 제출하기</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,95 @@
+div.container > a > img {
+    width: 200px;
+    height: 200px;
+    margin: 30px 42% 0 42%;
+}
+div.container > h3 {
+    font-size: 25px;
+    letter-spacing: 5px;
+    font-family: 'Indie Flower', cursive;
+    color: #848484;
+    text-align: right;
+    margin-top: 5px;
+}
+div.container1 {
+    margin: 60px 0 50px 100px;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 30px;
+}
+div.container1 > h1 {
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 40px !important;
+}
+div.container2 {
+    margin-bottom: 50px;
+    margin-left: 100px;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 30px;
+}
+div.container2 > a.btn-outline-primary {
+    width: 200px;
+    height: 70px;
+    font-size: 33px;
+}
+div.main {
+    text-align: center;
+    margin: 60px auto 120px auto;
+    position: relative;
+}
+div.main > img {
+    width: 800px;
+    height: 450px;
+}
+div.moto {
+    position: absolute;
+    left: 855px;
+    top: 100px;
+}
+div.moto > p {
+    font-size: 35px;
+    color: #6478F7;
+    font-family: 'Nanum Brush Script', cursive;
+    font-weight: bold;
+}
+div.moto > a {
+    margin-top: 225px;
+}
+div.row {
+    margin-right: 800px;
+    margin-left: 100px;
+    margin-top: 70px;
+}
+div.row > ul > li {
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+}
+div.row > ul > p {
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 30px;
+    margin-top: 30px;
+}
+footer {
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Indie Flower', cursive;
+    margin: 10px 20px 30px 0;
+    letter-spacing: 5px;
+}
+form {
+    margin-left: 140px;
+}
+form > input {
+    padding: 5px 15px;
+    border: 1px;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
+    font-weight: bold;
+    margin: 50px 0 50px 100px;
+
+}
+h2 {
+    font-family: 'Do Hyeon', sans-serif;
+}

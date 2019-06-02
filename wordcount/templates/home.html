@@ -1,9 +1,22 @@
-<h1> 안녕하세요, 여기서 글자를 세세요! </h1>
+{% extends 'base.html' %}
+{% load static %}
 
-<a href="{% url 'about' %}">ABOUT</a>
+{% block content %}
+    <div class="main">
+        <img src="{% static 'images/resume1.jpg' %}" alt="메인 사진">
+        <div class="moto">
+            <p class="remind">"잠깐, 확실한가요?"</p>
+            <a href="{% url 'about' %}" class="btn btn-outline-light btn-lg" tabindex="-1" role="button" aria-disabled="true">Are You Sure?</a>
+        </div>
+    </div>
+<footer>
+    <div class="footer">
+        <p class="copyright">ⓒ 2019 Are You Sure Company. All Rights Reserved</p>
+    </div>
+</footer>
 
-<form action="{% url 'result' %}">
-    <textarea cols="40" rows="10" name="fulltext"></textarea>
-    <br>
-    <input type="submit" value="Count!">
-</form>
+{% endblock %}
+
+
+
+

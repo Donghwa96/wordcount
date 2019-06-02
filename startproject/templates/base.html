@@ -1,0 +1,17 @@
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:500|Indie+Flower|Raleway:500|Do+Hyeon|Gaegu|Josefin+Sans:700|Jua|Nanum+Brush+Script" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h3 class="likelion">likelion 7th konkuk</h3>
+        <a href="{% url 'home' %}"><img src="{% static 'images/areyousure.png' %}" alt="icon"></a>
+    </div>
+    {% block content %}
+
+    {% endblock %}
+</body>

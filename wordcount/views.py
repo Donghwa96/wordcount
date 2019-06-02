@@ -13,10 +13,15 @@ def result(request):
     text = request.GET['fulltext']
     words = text.split()
     word_dictionary = {}
+    blank = text.replace(' ', '')
 
     for word in words:
         if word in word_dictionary:
-            word_dictionary[word] +=1
+            word_dictionary[word] += 1
         else:
             word_dictionary[word] = 1
-    return render(request, 'result.html', {'full': text, 'total': len(words), 'dictionary': word_dictionary.items()})
+
+    sorted_x = sorted(word_dictionary, key=word_dictionary.get, reverse=True)
+    sorted_list = [(key, word_dictionary[key]) for key in sorted_x][:5]
+    return render(request, 'result.html', {'full': text, 'total': len(text), 'noblank': len(blank), 'dictionary': sorted_list})
+
