@@ -17,5 +17,8 @@
 
 <h2>ScreenShots</h2>
 
-![wordcount1.png]
-
+![](wordcount1.png)
+![](wordcount2.png)
+![](wordcount3.png)
+![](wordcount4.png)
+![](wordcount5.png)
